@@ -1,12 +1,15 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.List;
 
@@ -37,6 +40,24 @@ public class WordAdapter extends ArrayAdapter<Word>{
             imagesView.setImageResource(local_word.getImageResourceID());
         }else{
             imagesView.setVisibility(View.GONE);
+        }
+
+        switch (local_word.getLayoutID()){
+            case 1:
+                listItemView.setBackgroundColor(Color.parseColor("#FD8E09"));
+                break;
+            case 2:
+                listItemView.setBackgroundColor(Color.parseColor("#379237"));
+                break;
+            case 3:
+                listItemView.setBackgroundColor(Color.parseColor("#8800A0"));
+                break;
+            case 4:
+                listItemView.setBackgroundColor(Color.parseColor("#16AFCA"));
+                break;
+            default:
+                listItemView.setBackgroundColor(Color.WHITE);
+                break;
         }
         return listItemView;
     }

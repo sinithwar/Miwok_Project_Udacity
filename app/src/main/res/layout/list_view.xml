@@ -3,34 +3,58 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:padding="16dp"
+              android:layout_height="@dimen/list_item_height"
               android:id="@+id/numbers_layout_resource"
 >
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:background="#FFF7DA"
             android:src="@mipmap/ic_launcher"
             android:id="@+id/ic_launcher"
     />
     <LinearLayout android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
+                  android:layout_height="match_parent"
                   android:orientation="vertical"
                   android:padding="8dp"
     >
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:id="@+id/miwok_text_space"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:textColor="#FFF"
                 tools:text="lutti"
+                android:textSize="18sp"
+                android:textStyle="bold"
         />
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:id="@+id/default_text_space"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:layout_marginLeft="16dp"
+                android:textSize="18sp"
+                android:textColor="#FFF"
                 tools:text="one"
         />
     </LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+        <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_play_arrow_black_24dp"
+        />
+    </RelativeLayout>
+
 
 </LinearLayout>
